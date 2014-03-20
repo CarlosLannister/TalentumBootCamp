@@ -1,0 +1,18 @@
+Git es un software de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando estas tienen un gran nÎáÎõÎémero de archivos de cÎáÎõÎådigo fuente. Al principio, Git se pensÎáÎõÎå como un motor de bajo nivel sobre el cual otros pudieran escribir la interfaz de usuario o front end como Cogito o StGIT. 2 Sin embargo, Git se ha convertido desde entonces en un sistema de control de versiones con funcionalidad plena. 3 Hay algunos proyectos de mucha relevancia que ya usan Git, en particular, el grupo de programaciÎáÎõÎån del nÎáÎõÎécleo Linux.
+El mantenimiento del software Git estÎáÎõÎİ actualmente (2009) supervisado por Junio Hamano, quien recibe contribuciones al cÎáÎõÎådigo de alrededor de 280 programadores.
+
+
+CaracterÎáÎõÎásticas[editar]
+
+El diseño de Git se basÎáÎõÎå en BitKeeper y en Monotone. 4 5
+El diseño de Git resulta de la experiencia del diseñador de Linux, Linus Torvalds, manteniendo una enorme cantidad de cÎáÎõÎådigo distribuida y gestionada por mucha gente, que incide en numerosos detalles de rendimiento, y de la necesidad de rapidez en una primera implementaciÎáÎõÎån.
+Entre las caracterÎáÎõÎásticas mÎáÎõÎİs relevantes se encuentran:
+Fuerte apoyo al desarrollo no lineal, por ende rapidez en la gestiÎáÎõÎån de ramas y mezclado de diferentes versiones. Git incluye herramientas especÎáÎõÎáficas para navegar y visualizar un historial de desarrollo no lineal. Una presunciÎáÎõÎån fundamental en Git es que un cambio serÎáÎõÎİ fusionado mucho mÎáÎõÎİs frecuentemente de lo que se escribe originalmente, conforme se pasa entre varios programadores que lo revisan.
+GestiÎáÎõÎån distribuida. Al igual que Darcs, BitKeeper, Mercurial, SVK, Bazaar y Monotone, Git le da a cada programador una copia local del historial del desarrollo entero, y los cambios se propagan entre los repositorios locales. Los cambios se importan como ramas adicionales y pueden ser fusionados en la misma manera que se hace con la rama local.
+Los almacenes de informaciÎáÎõÎån pueden publicarse por HTTP, FTP, rsync o mediante un protocolo nativo, ya sea a travÎáÎéÎİs de una conexiÎáÎõÎån TCP/IP simple o a travÎáÎéÎİs de cifrado SSH. Git tambiÎáÎéÎİn puede emular servidores CVS, lo que habilita el uso de clientes CVS pre-existentes y mÎáÎõÎådulos IDE para CVS pre-existentes en el acceso de repositorios Git.
+Los repositorios Subversion y svk se pueden usar directamente con git-svn.
+GestiÎáÎõÎån eficiente de proyectos grandes, dada la rapidez de gestiÎáÎõÎån de diferencias entre archivos, entre otras mejoras de optimizaciÎáÎõÎån de velocidad de ejecuciÎáÎõÎån.
+Todas las versiones previas a un cambio determinado, implican la notificaciÎáÎõÎån de un cambio posterior en cualquiera de ellas a ese cambio (denominado autenticaciÎáÎõÎån criptogrÎáÎõÎİfica de historial). Esto existÎáÎõÎáa en Monotone.
+Resulta algo mÎáÎõÎİs caro trabajar con ficheros concretos frente a proyectos, eso diferencia el trabajo frente a CVS, que trabaja con base en cambios de fichero, pero mejora el trabajo con afectaciones de cÎáÎõÎådigo que concurren en operaciones similares en varios archivos.
+Los renombrados se trabajan basÎáÎõÎİndose en similitudes entre ficheros, aparte de nombres de ficheros, pero no se hacen marcas explÎáÎõÎácitas de cambios de nombre con base en supuestos nombres ÎáÎõÎénicos de nodos de sistema de ficheros, lo que evita posibles, y posiblemente desastrosas, coincidencias de ficheros diferentes en un ÎáÎõÎénico nombre.
+Realmacenamiento periÎáÎõÎådico en paquetes (ficheros). Esto es relativamente eficiente para escritura de cambios y relativamente ineficiente para lectura si el reempaquetado (con base en diferencias) no ocurre cada cierto tiempo.
